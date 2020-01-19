@@ -1,0 +1,36 @@
+@media(max-width: 768px){
+   #main{
+      grid-template-columns: 1fr 4fr 1fr;
+   }
+}
+
+@media(max-width: 670px){
+   #header {
+      padding: 0.3rem;
+      font-size: .8rem;   
+   }
+   #header a{
+      padding-left: .5rem;
+   }
+   #navbar .nav-logo{
+      height: 2.3rem;
+      width: 2.2rem;
+      margin-left: 0.5rem;
+   }
+   #navbar .nav-menu ul li{
+      padding: 1rem .35rem;
+      font-size: 0.87rem;
+   }
+   #main{
+      grid-template-columns: 1fr 7fr 1fr;
+   }
+}
+
+@media(max-width: 500px){
+   #navbar .nav-logo{
+      display: none;
+   }
+   #navbar .container{
+      justify-content: center;
+   }
+} 
