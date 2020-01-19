@@ -10,9 +10,11 @@
 body {  
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
-  background: url("../images/taxi.jpg") no-repeat center center/cover;
-    width: 100vw;
-    height: 100vh;
+}
+.container{
+  background: url("../img/index-bg.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100%;
 }
 
 /* Header */
@@ -88,30 +90,8 @@ main a.portfolio:hover{
 }
 main .small-text {
   grid-column: 2/3;
-    margin: 5% auto;
+    margin: 3rem auto;
   color: #0795C3;
   font-size: 0.8rem;
 }
 
-/* Tablets & Phones */
-@media(max-width: 800px){
-  header .logo {
-    width: 110px;
-    height: 110px;
-    margin: 1% 10%;
-  }
-  header nav a {
-    font-size: 1rem;
-    padding: 1rem 0.8rem;
-  }
-}
-@media(max-width: 586px){
-  header .logo {
-    width: 80px;
-    height: 80px;
-  }
-  header nav a {
-    font-size: 0.8rem;
-    padding: 1rem 0.5rem;
-  }
-}
