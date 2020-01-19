@@ -100,6 +100,10 @@ h3{
 #main a:hover{
    background: var(--primary-color);
 }
+#main section:hover p::first-letter{
+   font-size: 2.5rem;
+   font-weight: 900;
+}
 #main a h3{
    margin-bottom: 0.1rem;
 }
