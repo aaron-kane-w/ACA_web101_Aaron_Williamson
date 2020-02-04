@@ -151,8 +151,9 @@ button{
 }
 @media(max-width: 750px){
    .container{
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(20, 1fr);
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      justify-content: center;
    }
    header{
       grid-column: 1/ span 7;
