@@ -1,0 +1,199 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* Utilities & Variables */
+:root {
+  --primary-color: rgb(189, 119, 54);
+}
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: 'Rock Salt', cursive;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+h4 {
+   font-size: 1.7rem;
+}
+span {
+  color: var(--primary-color);
+}
+li {
+  list-style: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-color);
+}
+.active {
+  color: var(--primary-color)
+}
+p {
+  color: rgb(133, 133, 133);
+}
+/* Header */
+header {
+  background: url('./img/bg.jpg') no-repeat top center/cover;
+}
+/* Header - Nav */
+header nav {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  padding: 0.5rem 1rem;
+}
+
+/* Header - Main */
+header main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 50px;
+}
+header main .showcase {
+  grid-column: 1/ span 1;
+  grid-row: 1/ span 2;
+  padding: 3rem 1rem 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+} 
+
+header main .btn {
+  background: var(--primary-color);
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 25px;
+  width: 175px;
+}
+header main .btn:hover{
+  color: #000;
+  font-weight: 700;
+}
+header main .main-info {
+  background: black;
+  grid-column: 1/ span 2;
+  grid-row: 3/ span 4;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.8rem;
+  
+}
+header main .main-info .main-info-block {
+  display: flex;
+  align-items: flex-start;
+  max-width: 220px;
+}
+header main .main-info .main-info-block i {
+  color: var(--primary-color);
+  margin-right: 1rem;
+}
+header main .main-social {
+  background: var(--primary-color);
+  grid-column: 3/ span 1;
+  grid-row: 3/ span 4;
+  align-self: flex-end;
+  padding: 1rem;
+}
+header main .main-social i {
+  font-size: 1.8rem;
+  padding: 0 0.35rem;
+}
+header main .main-social i:hover {
+  color: #000;
+}
+
+/* Section */
+section {
+  background: #1A1A1A;
+  padding: 4rem;
+  text-align: center;
+}
+section p {
+  max-width: 700px;
+  margin: 3rem  auto;
+}
+
+/* Article */
+article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem 0;
+}
+article .article-1 div {
+  background: url('./img/article1.jpg') no-repeat center center/cover;
+  height: 28rem;
+  width: 100%;
+}
+article .article-2 div {
+  background: url('./img/article2.jpg') no-repeat center center/cover;
+  height: 28rem;
+  width: 100%;
+}
+article .article-3 div {
+  background: url('./img/article3.jpg') no-repeat center center/cover;
+  height: 28rem;
+  width: 100%;
+}
+
+article div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+article div:hover {
+  opacity: 1;
+}
+
+/* footer */
+footer {
+  background: #1A1A1A;
+  padding: 1rem;
+  text-align: center;
+}
