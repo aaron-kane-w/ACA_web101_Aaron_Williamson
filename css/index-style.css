@@ -143,7 +143,10 @@ main div:last-child a{
   }
   header nav ul li:hover ul{
     left: -1.5rem;
+<<<<<<< HEAD
     white-space: wrap;
+=======
+>>>>>>> 43e6e282419e5a7cefdf3d39f245e9f2e19b55ac
   }
 }
 @media(max-width: 586px){
