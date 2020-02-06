@@ -1,0 +1,56 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  color: #fff;
+  background: #1E3250;
+}
+.btn{
+  width: 5rem;
+  height: 5rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.btn-dark{
+  background: #464646;
+}
+.btn-light{
+  background: #656565;
+}
+.btn-warm{
+  background: #FF9F0A;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+.container .input{
+  background: #222222;
+  padding: 0.5rem;
+  border: #fff 1px solid;
+}
+.container .input input{
+  width: 17.8rem;
+  padding: 1rem 0;
+  text-align: end;
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+.keys div{
+  display: flex;
+}
+.keys-1 div{
+  display: flex;
+}
+.keys-1 div .btn:first-child{
+  width: 10rem;
+}
+
+
