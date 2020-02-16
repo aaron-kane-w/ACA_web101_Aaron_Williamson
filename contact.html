@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Aaron Kane W | Portfolio</title>
+   <title>Aaron Kane W | About</title>
    <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css?family=Roboto|Russo+One&display=swap" rel="stylesheet">
    <!-- FontAwesome -->
@@ -16,9 +16,9 @@
 
 <body>
   <nav class="container">
-    <a href="index.html.html" class="home rainbow"><i class="fas fa-user-astronaut"></i></a>
+    <a href="index.html" class="home"><i class="fas fa-user-astronaut"></i></a>
     <ul>
-      <li><a href="#">Projects <i class="fas fa-angle-left menu"></i></a>
+      <li><a href="#">Projects <i class="fas fa-angle-down"></i></a>
         <ul>
           <li><a href="/src/code-a-long/Vid-Portfolio/vid-p.html" target="_blank">Video Portfolio <span>2/11/20</span></a></li>
           <li><a href="/src/haircut/haircut.html" target="_blank">Trim Barbershop <span>2/4/20</span></a></li>
@@ -28,19 +28,27 @@
         </ul>
       </li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
-   <main class="container">
+  <section id="contact" class="container">
     <div>
-      <h1>Aaron Kane W</h1>
-      <h2>Software Developer</h2>
-      <h3>Attending Austin Coding Academy</h3>
+      <h2>Contact</h2>
+      <h4>Have questions or want to collaborate? Send me a message and I'll get back to you as soon as possible. </h4>
+      <form action="get">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="5" placeholder="Let's connect!"></textarea>
+        <input type="submit" value="Send Message">
+      </form>
     </div>
-   </main>
-   
-   <footer>
+  </section>
+
+  <footer>
     <div class="container">
       <a href=""><i class="fab fa-github"></i></a>
       <a href=""><i class="fab fa-linkedin"></i></a>
