@@ -1,0 +1,73 @@
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.active {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+header {
+  background: url('./img/macro-photography-of-spilled-coffee-filled-teacup-1235717.jpg') no-repeat center center/cover;
+  height: 100vh;
+}
+nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 1.75rem;
+}
+nav div:first-child a:hover, 
+nav div:last-child a:hover {
+  font-weight: 900;
+}
+span {
+  font-size: 3.5rem;
+  line-height: 2;
+  color: #E1873E;
+}
+
+header div h3 {
+  text-align: center;
+  margin-top: 300px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+
+@media(max-width: 828px) {
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  /* nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 1.75rem;
+  } */
+  nav div:nth-child(2){
+    order: -1;
+    grid-column: 1 /span 3;
+    justify-self: center;
+  }
+  nav div:first-child, 
+  nav div:last-child {
+    
+}
+
+  span {
+    font-size: 3.5rem;
+    line-height: 2;
+    color: #E1873E;
+  }
+}
