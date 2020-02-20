@@ -11,10 +11,6 @@ body {
   margin: 0 auto;
   overflow: hidden;
 }
-.active {
-  font-weight: 900;
-  font-size: 1.3rem;
-}
 header {
   background: url('./img/bg.jpg') no-repeat center center/cover;
   height: 100vh;
@@ -52,9 +48,9 @@ header div h3 {
   margin-top: 250px;
   color: #fff;
   font-size: 1.5rem;
+  padding: 0 0.5rem;
 }
 /* DRINKS */
-main {}
 main h2 {
   text-align: center;
   font-size: 3.5rem;
@@ -82,7 +78,7 @@ main .menu ul .menu-style {
   margin-bottom: 3rem;
 }
 
-/* ARTICLES */
+/* EVENTS */
 article {
   padding: 4rem 0 2rem 0;
   background: #333;
@@ -122,7 +118,7 @@ article .article small {
   background: var(--primary-color);
 }
 #about div:first-child {
-  background: url('./img/roland-denes-zeZMi6Y4fZY-unsplash.jpg') no-repeat center center/cover;
+  background: url('./img/about.jpg') no-repeat center center/cover;
   width: 100%;
   border-bottom-right-radius: 50%;
 }
@@ -166,9 +162,6 @@ article .article small {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 1.25rem;
-}
-#contact form {
-  width: 700px;
 }
 #contact h2 {
   font-size: 3.3rem;
@@ -240,7 +233,7 @@ footer div:last-child {
 }
 
 
-@media(max-width: 938px) {
+@media(max-width: 970px) {
   header nav {
     display: grid;
     grid-template-columns: 1fr 625px 1fr;
@@ -262,6 +255,28 @@ footer div:last-child {
     grid-row: 2;
     grid-column: 2/2;
 }
-
-
+}
+@media(max-width: 787px) {
+  article {
+    padding: 2rem 0;
+  }
+  article .article img {
+    height: 300px;
+    width: 350px;
+    margin-right: 1.25rem;
+  }
+  #about div:first-child h2 {
+    font-size: 4.5rem;
+    margin: 3rem 2rem 0 0;
+  }
+  #about div:last-child {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+  #about div:last-child p {
+    font-size: 1.2rem;
+  }
+}
+@media(max-width: 631px) {
+  
 }
