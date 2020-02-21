@@ -1,0 +1,66 @@
+body {
+  background: #F83198;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  margin: 1.5rem 0;
+  font-size: 3rem;
+  color: #fff;
+}
+.box {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #fff;
+  margin-bottom: 0.5rem;
+}
+.container .box:nth-child(odd) {
+  transition: transform 1s ease;
+}
+.container:hover .box:nth-child(odd) {
+  transform: scale(2) translateX(3rem) rotate(360deg);
+}
+.container .box:nth-child(even) {
+  transition: transform 1s ease;
+}
+.container:hover .box:nth-child(even) {
+  transform: scale(.5) translateX(-3rem) rotate(-360deg);
+}
+.color1 {
+  background: rgb(6, 226, 255);
+}
+.color2 {
+  background: rgb(4, 110, 172);
+}
+.color3 {
+  background: rgb(6, 23, 255);
+}
+.color4 {
+  background: rgb(60, 6, 255);
+}
+.color5 {
+  background: rgb(125, 46, 214);
+}
+.color6 {
+  background: rgb(93, 15, 104);
+}
+.color7 {
+  background: rgb(172, 20, 53);
+}
+.color8 {
+  background: rgb(235, 84, 104);
+}
+.color9 {
+  background: rgb(255, 97, 6);
+}
+.color10 {
+  background: rgb(245, 183, 12);
+}
+.color11 {
+  background: rgb(177, 219, 24);
+}
+.color12 {
+  background: rgb(18, 219, 68);
+}
