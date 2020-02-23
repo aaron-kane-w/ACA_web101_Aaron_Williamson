@@ -14,7 +14,7 @@ body {
 }
 body::before {
   content: "";
-  background: url('../img/bg.jpg') no-repeat top center/cover;
+  background: url('/../ACA_web101_Aaron_Williamson/img/bg.jpg') no-repeat top center/cover;
   opacity: 0.9;
   position: absolute;
   top: 0;
