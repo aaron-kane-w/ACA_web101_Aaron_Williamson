@@ -59,7 +59,7 @@ nav .rainbow {
 }
 @keyframes animate1 {
   0% {color: #000; transform: rotate(36deg);}
-  10% {color: rgba(241, 86, 24, 0.849); transform: rotate(36deg);}
+  10% {color: rgba(241, 85, 24, 0.849); transform: rotate(36deg);}
   20% {color: rgba(241, 201, 24, 0.849); transform: rotate(72deg);}
   30% {color: rgba(140, 241, 24, 0.849); transform: rotate(108deg);}
   40% {color: rgba(60, 241, 24, 0.849); transform: rotate(144deg);}
