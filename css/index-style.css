@@ -14,7 +14,7 @@ body {
 }
 body::before {
   content: "";
-  background: url('/img/bg.jpg') no-repeat top center/cover;
+  background: url('../img/bg.jpg') no-repeat top center/cover;
   opacity: 0.9;
   position: absolute;
   top: 0;
