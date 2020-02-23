@@ -1,161 +1,397 @@
-/* Resets & Utilities */
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/* Variable & Utilities */
 :root{
-  --primary-color: rgb(247,179,49);
+  --primary-color: #A913B1;
 }
-body {  
-  font-family: Arial, Helvetica, sans-serif;
+body {
+   color: #fff;
+   font-family: 'Roboto', sans-serif; 
+   background: #000;
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   box-sizing: border-box;
+}
+body::before {
+  content: "";
+  background: url('/img/bg.jpg') no-repeat top center/cover;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+a {
   color: #fff;
-  background: url("../img/bg.jpg") no-repeat center center/cover;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+a:hover {
+  color: var(--primary-color);
+}
+.active {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
-/* Header */
-header {
-  max-width: 1300px;
-  margin: 0 auto;
+/* Nav */
+nav {
+  background: #000;
   padding-top: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  z-index: 1;
 }
-header .logo {
-  width: 130px;
-  height: 130px;
-  margin: 1% 25%;
+nav .home {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-size: 3rem;
 }
-header nav ul{
+nav .rainbow {
+  animation-name: animate1;
+  animation-duration: 2s;
+  animation-delay: 0.75s;
+  animation-timing-function: linear; 
+}
+@keyframes animate1 {
+  0% {color: #000; transform: rotate(36deg);}
+  10% {color: rgba(241, 86, 24, 0.849); transform: rotate(36deg);}
+  20% {color: rgba(241, 201, 24, 0.849); transform: rotate(72deg);}
+  30% {color: rgba(140, 241, 24, 0.849); transform: rotate(108deg);}
+  40% {color: rgba(60, 241, 24, 0.849); transform: rotate(144deg);}
+  50% {color: rgba(24, 241, 151, 0.849); transform: rotate(180deg);}
+  60% {color: rgba(24, 241, 241, 0.849); transform: rotate(216deg);}
+  70% {color: rgba(39, 24, 241, 0.849); transform: rotate(252deg);}
+  80% {color: rgba(205, 24, 241, 0.849); transform: rotate(288deg);}
+  90% {color: rgba(241, 24, 71, 0.849); transform: rotate(324deg);}
+  100% {color: #fff; transform: rotate(360deg);}
+}
+
+nav ul{
   list-style: none;
   display: flex;
   justify-content: flex-end;
 }
-header nav ul li{
+nav ul li{
   position: relative;
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  font-weight: 900;
-  text-shadow: 0.1rem 0.1rem #000;
   white-space: nowrap;
 }
-header nav ul li i{
+nav ul li i{
   color: #fff;
 }
-header nav ul li a {
+nav ul li a {
   text-decoration: none;
   color: #fff;
-  padding: .75rem 2rem;
+  padding: .75rem 1.5rem;
+  transition: all 0.3s ease-in;
 }
-header nav ul li a:hover, 
-header nav ul li a:hover i{
+nav ul li a i.menu {
+  animation-name: animate2;
+  animation-duration: 2s;
+  animation-delay: 0.75s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+nav ul li a:hover, 
+nav ul li a:hover i{
   color: var(--primary-color);
 }
+
+@keyframes animate2 {
+  from {
+    color: #fff;
+    transform: rotate(0deg);
+    font-size: 6rem;
+    padding-top: 6rem;
+  }
+  to {
+    transform: rotate(270deg);
+  }
+}
+
 /* Dropdown Menu */
-header nav ul li ul{
+nav ul li ul{
   display: none;
 }
-header nav ul li:hover ul{
+nav ul li:hover ul{
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 2.5rem;
   left: 0;
+  text-shadow: 2px 2px #222;
   white-space: nowrap;
+  z-index: 2;
+  background: rgba(8, 8, 8, 0.7);
 }
-header nav ul li:hover ul li span{
+nav ul li:hover ul li span{
   font-size: 0.6rem;
 }
 
-
 /* Main */
 main {
-  display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 2fr auto minmax(5rem, 1fr);
+  height: 87%;
+  position: relative;
+  display: flex;
 }
-main #profile-pic {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  grid-column: 2/3;
-  margin: 15% auto;
-}
-main div{
-  grid-column: 2/3;
-  margin: 2% auto;
-  text-align: center;
+main div {
+  padding-left: 7rem;
+  padding-top: 9rem;
 }
 main h1 {
-  border-bottom: 4px solid var(--primary-color);
-  text-shadow: 0.2rem 0.2rem #000;
-  margin-bottom: 0.8rem;
+  font-family: 'Russo One', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+  text-shadow: 1px 3px #A913B1;
 }
 main h2 {
-  font-style: italic;
-  font-size: 1.6rem;
-  text-shadow: 0.2rem 0.2rem #000;
-  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  text-shadow: 2px 2px #222;
 }
-main a.portfolio{
-  color: #000;
+main h3 {
+  font-size: 1rem;
+  text-shadow: 2px 2px #222;
+}
+footer {
+  text-align: end;
+  font-size: 2rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* About Page */
+#about {
+  padding: 0 3rem;
+  height: 87%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+}
+#about img {
+  width: 100%;
+  box-shadow: 2px 2px 6px 5px var(--primary-color)
+}
+#about div:last-child {
+  max-height: 55rem;
+  background: rgba(8, 8, 8, 0.7);
+  padding: 1rem;
+}
+#about div:last-child h2 {
+  font-size: 3.6rem;
+}
+#about div:last-child h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: .75rem;
+}
+#about div:last-child a {
+  display: none;
+}
+#about div:last-child p {
+  font-size: 1.4rem;
+} 
+
+/* Contact Page */
+#contact {
+  padding: 0 3rem;
+  height: 87%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+#contact div {
+  max-width: 40rem;
+}
+#contact h2 {
+  font-size: 4.5rem;
+  text-shadow: 1px 3px #A913B1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#contact h4 {
+  font-size: 1.7rem;
+  text-shadow: 2px 2px #222;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#contact label {
+  display: block;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px #222;
+  margin-bottom: 0.5rem;
+}
+#contact input,
+#contact textarea {
+  padding: 0.3rem;
+  width: 100%;
+  border: 1px #222 solid;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#contact input[type="submit"] {
   background: #fff;
-  font-style: italic;
-  font-size: 1.25rem;
-  letter-spacing: 0.7rem;
-  text-decoration: none;
-  border-radius: 25px;
-  padding: 0.75rem 2.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.4s ease-in;
 }
-main a.portfolio:hover{
+#contact input[type="submit"]:hover {
   background: var(--primary-color);
+  color: #fff;
 }
-main div:last-child {
-  grid-column: 2/3;
-  margin: 3rem auto;
-  font-size: 0.8rem;
-}
-main div:last-child a{
-  color: #0795C3;
-}
+
+
+
 /* Media Queries */
-@media(max-width: 800px){
-  
-  header .logo {
-    width: 110px;
-    height: 110px;
-    margin: 1% 10%;
+@media(max-width: 1084px) {
+  body::before {
+    opacity: 0.8;
   }
-  header nav ul{
-    display: grid;
-    margin-right: 2rem;
-    text-align: end;
+  nav .home {
+    right: 2rem;
+    left: auto;
   }
-  header nav ul li:first-child{
-    order: 1;
+  nav ul{
+    justify-content: flex-start;
   }
-  header nav ul li a {
-    font-size: 1rem;
-    padding: 1rem 0.8rem;
+  main div {
+    padding-left: 0rem;
+    padding-top: 0rem;
+    text-align: right;
+    position: absolute;
+    top: 17rem;
+    right: 5rem;
   }
-  header nav ul li:hover ul{
-    left: -1.5rem;
-<<<<<<< HEAD
-    white-space: wrap;
-=======
->>>>>>> 43e6e282419e5a7cefdf3d39f245e9f2e19b55ac
+  footer .ninja{
+    display: none;
+  }
+  #about img {
+    display: none;
+  }
+  #about div:last-child {
+    grid-column: 1 /span 2;
+    grid-row: 1;
+    background: rgba(8, 8, 8, 0.7);
+  }
+  #about div:last-child h2 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+  }
+  #about div:last-child h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  #about div:last-child a {
+    display: inline-block;
+    margin-left: 0.5rem;
+    text-shadow: 3px 2px var(--primary-color);
+  }
+  #about div:last-child a:hover {
+    text-shadow: none;
+  }
+  #about div:last-child p {
+    font-size: 1.8rem;
+  } 
+  #contact h2 {
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+  }
+  #contact h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  #contact label {
+    font-size: 1.2rem;
+    margin-bottom: 0.35rem;
+  }
+  #contact input,
+  #contact textarea {
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.35rem;
   }
 }
-@media(max-width: 586px){
-  header .logo {
-    width: 80px;
-    height: 80px;
+
+@media(max-width: 863px) {
+  nav ul li{
+    font-size: 1.3rem;
   }
-  header nav ul li a {
+  main div {
+    padding-left: 0rem;
+    padding-top: 0rem;
+    text-align: right;
+    position: absolute;
+    top: 13rem;
+    right: 3rem;
+  }
+  main h1 {
+    font-size: 4rem;;
+  }
+  main h2 {
+    font-size: 1.5rem;
+  }
+  
+}
+
+@media(max-width: 576px) {
+  nav .home {
+    right: 1rem;
+    font-size: 2rem;
+  }
+  nav ul li{
+    font-size: 1.1rem;
+  }
+  nav ul li a {
+    padding: 1rem .75rem;
+  }
+  main div {
+    right: 1rem;
+  }
+  main h1 {
+    font-size: 3.5rem;
+  }
+  footer {
+    padding-right: 1rem;
+  }
+  #about div:last-child h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.4rem;
+  }
+  #about div:last-child h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.4rem;
+  }
+  #about div:last-child a {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  #about div:last-child p {
     font-size: 0.8rem;
-    padding: 1rem 0.5rem;
+  } 
+  #contact h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  #contact h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  #contact label {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  #contact input,
+  #contact textarea {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
   }
 }
