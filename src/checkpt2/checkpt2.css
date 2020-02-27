@@ -285,11 +285,16 @@ footer .social {
 }
 footer .social a {
   font-size: 1.2rem;
+  height: 3rem;
+  width: 3rem;
   color: #fff;
   background: var(--primary-color);
   border-radius: 50%;
   margin: 1rem;
-  padding: 1rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .social a:hover {
   color: #111;
