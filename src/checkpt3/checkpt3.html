@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Fund Me</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Trade+Winds&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="checkpt3.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cookie <span>Fund</span> Me!!!</h1>
+    </header>
+    <main>
+      <section id="cookie" onclick="cookieClick(1)">
+      </section>
+      <section id="count">
+        <p>You've made <span class="cookieNum">0</span> cookies!!!</p>
+        <small>*Each batch gains you support & more cookies</small>
+        <div>
+          <button onclick="makeBatch()">
+            Batches: <span id="cookieBat">0</span><br />
+            Cost: <span id="cookieCost">10</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="checkpt3.js"></script>
+</body>
+</html>
